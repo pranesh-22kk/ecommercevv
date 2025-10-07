@@ -1,0 +1,204 @@
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  margin-bottom: var(--spacing-4);
+}
+
+.input-label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--gray-700);
+  margin-bottom: var(--spacing-1);
+}
+
+.input-required {
+  color: var(--error);
+  margin-left: var(--spacing-1);
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-family: inherit;
+  background-color: var(--white);
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.input-field::placeholder {
+  color: var(--gray-400);
+}
+
+.input-with-icon {
+  padding-left: var(--spacing-10);
+}
+
+.input-icon {
+  position: absolute;
+  left: var(--spacing-3);
+  color: var(--gray-400);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.input-focused .input-icon {
+  color: var(--primary-color);
+}
+
+/* Error State */
+.input-error {
+  border-color: var(--error);
+}
+
+.input-error:focus {
+  border-color: var(--error);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.input-error-message {
+  font-size: var(--font-size-sm);
+  color: var(--error);
+  margin-top: var(--spacing-1);
+}
+
+/* Disabled State */
+.input-disabled {
+  background-color: var(--gray-50);
+  color: var(--gray-500);
+  cursor: not-allowed;
+  border-color: var(--gray-200);
+}
+
+.input-disabled:focus {
+  border-color: var(--gray-200);
+  box-shadow: none;
+}
+
+/* Input Variants */
+.input-search {
+  border-radius: var(--radius-full);
+  padding-left: var(--spacing-10);
+  padding-right: var(--spacing-10);
+}
+
+.input-large {
+  padding: var(--spacing-4) var(--spacing-5);
+  font-size: var(--font-size-lg);
+}
+
+.input-small {
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-sm);
+}
+
+/* Textarea */
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+/* Select */
+.select-field {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right var(--spacing-2) center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: var(--spacing-8);
+}
+
+/* Checkbox and Radio */
+.checkbox,
+.radio {
+  width: 18px;
+  height: 18px;
+  margin-right: var(--spacing-2);
+  accent-color: var(--primary-color);
+}
+
+.checkbox-label,
+.radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  color: var(--gray-700);
+}
+
+.checkbox-label:hover,
+.radio-label:hover {
+  color: var(--gray-900);
+}
+
+/* Input Group */
+.input-group-horizontal {
+  display: flex;
+  gap: var(--spacing-3);
+  align-items: flex-end;
+}
+
+.input-group-horizontal .input-group {
+  margin-bottom: 0;
+  flex: 1;
+}
+
+/* File Input */
+.file-input {
+  border: 2px dashed var(--gray-300);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  text-align: center;
+  background-color: var(--gray-50);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.file-input:hover {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color)/5;
+}
+
+.file-input input[type="file"] {
+  display: none;
+}
+
+.file-input-text {
+  color: var(--gray-600);
+  font-size: var(--font-size-sm);
+}
+
+.file-input-button {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .input-group-horizontal {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .input-large {
+    padding: var(--spacing-3) var(--spacing-4);
+    font-size: var(--font-size-base);
+  }
+}
