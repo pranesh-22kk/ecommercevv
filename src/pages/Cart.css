@@ -26,7 +26,7 @@
   margin: 0 auto;
 }
 
-.empty-cart-icon {
+.empty-cart-icon  {
   font-size: 4rem;
   color: var(--text-secondary);
   margin-bottom: 2rem;
