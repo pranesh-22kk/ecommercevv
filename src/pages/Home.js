@@ -15,7 +15,7 @@ const Home = () => {
           <div className="hero-content">
             <div className="hero-text">
               <h1>Welcome to ShopEasy</h1>
-              <p>Discover amazing products at unbeatable prices. Your one-stop shop for everything you need.</p>
+              <p>Discover the amazing products at unbeatable prices. Your one-stop shop for everything you need.</p>
               <div className="hero-actions">
                 <Button size="large" as={Link} to="/products">
                   Shop Now <FaArrowRight />
